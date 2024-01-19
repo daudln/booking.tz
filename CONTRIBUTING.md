@@ -5,9 +5,9 @@ Thank you for considering contributing to the Booking.tz project! Please review 
 ## Getting Started
 
 1. Fork the repository
-2. Create a new branch: `git checkout -b feature/new-feature`
+2. Create a new branch: `git checkout -b feature/new-feature-name`
 3. Make your changes and commit them
-4. Push to the branch: `git push origin feature/new-feature`
+4. Push to the branch: `git push origin feature/new-feature-name`
 5. Open a pull request
 
 ## Code of Conduct
