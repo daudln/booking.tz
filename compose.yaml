@@ -7,7 +7,7 @@ services:
     env_file:
       - .env
     ports:
-      - 5433:5432
+      - 5432:5432
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -22,7 +22,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 3001:3000
+      - 3000:3000
     develop:
       watch:
         - path: ./package.json
