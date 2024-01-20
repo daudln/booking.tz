@@ -1,0 +1,16 @@
+"page": {
+                "number": 1,
+                "hasNextPage": true,
+                "hasPreviousPage": false,
+                "nextPageNumber": 2,
+                "previousPageNumber": 0,
+                "totalElements": 67,
+                "pagesNumberArray": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "numberOfPages": 4,
+                "currentPageNumber": 1
+            }

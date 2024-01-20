@@ -1,5 +1,4 @@
 import {  createSchema, createYoga } from "graphql-yoga";
-import userSchema from "./schema/user";
 
 const schema = createSchema({
     typeDefs: /* GraphQL */ `
