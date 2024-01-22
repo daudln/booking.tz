@@ -1,17 +1,13 @@
-import LoginForm from "@/components/login-form";
-import { Button } from "@/components/ui/button";
+import NavigationButton from "@/components/navigation-button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-2 justify-center">
+    <main className="flex flex-col min-h-screen items-center justify-center gap-4">
       <div>
-        <h1 className="text-3xl font-bold">Booking Tz</h1>
+        <h1 className="text-3xl font-bold  drop-shadow-md">Booking TZ</h1>
       </div>
-      <div>
-        <Button variant="default">Book</Button>
-      </div>
-      <div className="w-full flex items-center justify-center gap-2">
-        <LoginForm/>
+      <div >
+        <NavigationButton to="/signin" label="Signin"/>
       </div>
     </main>
   );

@@ -22,14 +22,15 @@ enum Gender {
 
 model User {
   id                    Int                    @id @default(autoincrement())
-  uid                   String                 @default(cuid())
+  uid                   String                 @unique @default(cuid())
   name                  String?
   email                 String?                @unique
   emailVerified         DateTime?
   image                 String?
+  password              String?
   role                  UserRole               @default(USER)
   profile               Profile?
-  isActive Boolean @default(false)
+  isActive              Boolean                @default(false)
   accounts              Account[]
   sessions              Session[]
   isTwoFactorEnabled    Boolean                @default(false)
@@ -42,15 +43,14 @@ model Profile {
   firstName String
   lastName  String
   userId    Int
-  type      String
   user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId])
 }
 
 model Account {
-  id      Int      @id @default(autoincrement())
-  uid     String   @default(cuid())
+  id                Int     @id @default(autoincrement())
+  uid               String  @default(cuid())
   userId            Int
   type              String
   provider          String
@@ -68,8 +68,8 @@ model Account {
 }
 
 model Session {
-  id      Int      @id @default(autoincrement())
-  uid     String   @default(cuid())
+  id           Int      @id @default(autoincrement())
+  uid          String   @default(cuid())
   sessionToken String   @unique
   userId       Int
   expires      DateTime
@@ -107,8 +107,8 @@ model TwoFactorToken {
 }
 
 model TwoFactorConfirmation {
-  id      Int      @id @default(autoincrement())
-  uid     String   @default(cuid())
+  id     Int    @id @default(autoincrement())
+  uid    String @default(cuid())
   userId Int
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 

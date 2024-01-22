@@ -6,6 +6,8 @@ import authConfig  from '@/lib/auth.config'
 export const {
   handlers: { GET, POST },
   auth,
+  signIn,
+  signOut
 } = NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   adapter: PrismaAdapter(prisma),
