@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
+import { cn } from '@/lib/utils'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="p-4 min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 to-white text-zinc-600">
+      <body className={cn(inter.className, "p-4 min-h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 to-white text-zinc-600")}>
         {children}
       </body>
     </html>

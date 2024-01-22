@@ -2,7 +2,7 @@
 
 import { User, userSchema } from "@/schema/user";
 import prisma from "@/lib/db";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export const register = async (input: User) => {
   const validatedInput = userSchema.safeParse(input);
